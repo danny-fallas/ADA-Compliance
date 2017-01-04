@@ -1,0 +1,12 @@
+C:\Users\dfallas\Documents\Visual Studio 2015\Projects\ADACompliance\ADACompliance\bin\Release\ADACompliance.exe.config
+C:\Users\dfallas\Documents\Visual Studio 2015\Projects\ADACompliance\ADACompliance\bin\Release\ADACompliance.exe
+C:\Users\dfallas\Documents\Visual Studio 2015\Projects\ADACompliance\ADACompliance\bin\Release\ADACompliance.pdb
+C:\Users\dfallas\Documents\Visual Studio 2015\Projects\ADACompliance\ADACompliance\obj\Release\ADACompliance.csprojResolveAssemblyReference.cache
+C:\Users\dfallas\Documents\Visual Studio 2015\Projects\ADACompliance\ADACompliance\obj\Release\ADACompliance.exe
+C:\Users\dfallas\Documents\Visual Studio 2015\Projects\ADACompliance\ADACompliance\obj\Release\ADACompliance.pdb
+C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\bin\Release\ADACompliance.exe.config
+C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\obj\Release\ADACompliance.exe
+C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\obj\Release\ADACompliance.pdb
+C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\bin\Release\ADACompliance.exe
+C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\bin\Release\ADACompliance.pdb
+C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\obj\Release\ADACompliance.csprojResolveAssemblyReference.cache
