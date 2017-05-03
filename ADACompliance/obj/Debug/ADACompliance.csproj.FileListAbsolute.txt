@@ -10,3 +10,9 @@ C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\obj\Debug\ADACompliance.pdb
 C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\bin\Debug\ADACompliance.exe
 C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\bin\Debug\ADACompliance.pdb
 C:\Users\Danny\STATESIDE\ADACompliance\ADACompliance\obj\Debug\ADACompliance.csprojResolveAssemblyReference.cache
+B:\dann_\Development\Me\ADA-Compliance\ADACompliance\bin\Debug\ADACompliance.exe.config
+B:\dann_\Development\Me\ADA-Compliance\ADACompliance\bin\Debug\ADACompliance.exe
+B:\dann_\Development\Me\ADA-Compliance\ADACompliance\bin\Debug\ADACompliance.pdb
+B:\dann_\Development\Me\ADA-Compliance\ADACompliance\obj\Debug\ADACompliance.csprojResolveAssemblyReference.cache
+B:\dann_\Development\Me\ADA-Compliance\ADACompliance\obj\Debug\ADACompliance.exe
+B:\dann_\Development\Me\ADA-Compliance\ADACompliance\obj\Debug\ADACompliance.pdb

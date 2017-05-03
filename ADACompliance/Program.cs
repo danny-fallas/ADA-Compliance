@@ -42,8 +42,8 @@ namespace ADACompliance
                 {
                     var values = new NameValueCollection();
                     values["url"] = site;
-                    values["certainty"] = "80";
-                    values["priority"] = "80";
+                    values["certainty"] = "100"; //Allows you to filter out these "uncertain" results by choosing a minimum acceptable certainty score.Valid values: must be one of '0','20','40','60','80','100'
+                    values["priority"] = "80"; //Each issue reported will be given a calculated priority score which you can then use to filter or order your results. Valid values: must be one of '0','20','40','60','80','100'
 
                     var response = client.UploadValues(requestUrl, values);
 
@@ -71,7 +71,11 @@ namespace ADACompliance
                     }
                 }
             }
-            catch { return null; }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERROR: " + e.Message);
+                return null;
+            }
 
             return returnMe;
         }
@@ -102,7 +106,10 @@ namespace ADACompliance
                     GetInternalLinks(link);
                 }
             }
-            catch { }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERROR: " + e.Message);
+            }
         }
 
         public static List<string> Find(string file)
@@ -147,7 +154,10 @@ namespace ADACompliance
             InternalLinks = new List<string>();
             string usrInput = Console.ReadLine();
             InternalLinks.Add(usrInput);
+            Console.WriteLine("Crawling website ...");
+#if !DEBUG
             GetInternalLinks(usrInput);
+#endif
 
             Console.WriteLine("Checking ADA compliance ...");
             string tableRows = string.Empty;
