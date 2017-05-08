@@ -6,6 +6,8 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
+using System.Xml;
+using System.Xml.XPath;
 
 namespace ADACompliance
 {
@@ -80,6 +82,34 @@ namespace ADACompliance
             return returnMe;
         }
 
+        private static void GetUrlsFromSitemap(string url)
+        {
+            XmlReader xmlReader = new XmlTextReader(string.Format("{0}/sitemap", url));
+            XmlDocument document = new XmlDocument();
+            document.Load(xmlReader);
+
+            DigXML(document.ChildNodes);
+        }
+
+        private static void DigXML(XmlNodeList nodes)
+        {
+            foreach (XmlNode item in nodes)
+            {
+                if (item.Name == "loc")
+                {
+                    if (!InternalLinks.Contains(item.InnerText))
+                        InternalLinks.Add(item.InnerText);
+                }
+                else
+                {
+                    if (item.HasChildNodes)
+                        DigXML(item.ChildNodes);
+                    else
+                        continue;
+                }
+            }
+        }
+
         public static void GetInternalLinks(string inputURL)
         {
             //Console.WriteLine("Inspecting: "+inputURL);
@@ -152,11 +182,17 @@ namespace ADACompliance
         {
             Console.WriteLine("Enter the URL to inspect (i.e: http://www.something.com):");
             InternalLinks = new List<string>();
+#if DEBUG
+            string usrInput = "http://www.daveandbusters.com";
+#else
             string usrInput = Console.ReadLine();
+#endif
+
             InternalLinks.Add(usrInput);
             Console.WriteLine("Crawling website ...");
+            GetUrlsFromSitemap(usrInput);
 #if !DEBUG
-            GetInternalLinks(usrInput);
+            //GetInternalLinks(usrInput);
 #endif
 
             Console.WriteLine("Checking ADA compliance ...");
